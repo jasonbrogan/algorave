@@ -20,6 +20,7 @@ live_loop :sample_slicer do
   slice_size = 0.125
   s = slice * slice_size
   f = s + slice_size
-  sample a, beat_stretch: 4, start: s, finish: f
-  sleep 4 / slice
+  n = [1, 2, 3, 4].choose
+  sample a, beat_stretch: 32, start: s, finish: f
+  sleep n
 end
